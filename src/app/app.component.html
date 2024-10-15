@@ -1,0 +1,274 @@
+<div class="container-fluid overflow-auto">
+  <div class="row menu">
+    <div class="col-sm-12 col-md-2 col-lg-2 left-icon">
+      <div class="d-inline-flex">
+        <div class="d-flex flex-column">
+          <mdb-icon fas icon="search" style="padding-right: 1.5rem;"></mdb-icon>
+          <p><a href="">Search</a></p>
+        </div>
+        <div class="d-flex flex-column">
+          <mdb-icon fas icon="map-marker-alt"></mdb-icon>
+          <p><a href="">Find Me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-8 logo-sec">
+      <h1><a href="">bliss</a></h1>
+      <ul class="brand-menu" style="text-align: center;">
+        <li><a href="">NEW</a></li>
+        <li>/</li>
+        <li><a href="">BODY</a></li>
+        <li>/</li>
+        <li><a href="">SKIN CARE</a></li>
+        <li>/</li>
+        <li><a href="">SHOP ALL</a></li>
+        <li>/</li>
+        <li><a href="">THIS IS BLISS</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-2 col-lg-2 right-icon">
+      <div class="d-inline-flex" style="float: right;">
+        <div class="d-flex flex-column">
+          <mdb-icon far icon="hand-paper" style="text-align: center;"></mdb-icon>
+          <p><a href="">Sign In /Register</a></p>
+        </div>
+        <div class="d-flex flex-column">
+          <mdb-icon fas icon="shopping-bag"></mdb-icon>
+          <p style="padding-left: 11px;"><a href="">Bag</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row res-logo">
+    <h1>bliss</h1>
+  </div>
+  <div class="row">
+    <ul class="main-menu hide">
+      <li>
+        <form class="form-inline md-form form-md">
+          <mdb-icon fas icon="search"></mdb-icon>
+          <input class="form-control form-control-md ml-3" type="text" placeholder="What are you looking for?" aria-label="Search"
+            mdbInput>
+        </form>
+      </li>
+      <li><a href="#">NEW</a></li>
+      <li><a href="#">BODY</a></li>
+      <li><a href="#">SKIN CARE</a></li>
+      <li><a href="#">SHOP ALL</a></li>
+      <li><a href="#">THIS IS A BLISS</a></li>
+    </ul>
+    <div class="res-top-menu" (click)="toggleMenu()">
+      <mdb-icon *ngIf="menu" fas icon="bars"></mdb-icon>
+      <mdb-icon *ngIf="!menu" fas icon="times"></mdb-icon>
+    </div>
+  </div>
+  <div class="row icons-menu">
+    <ul>
+      <li>
+        <mdb-icon fas icon="map-marker-alt"></mdb-icon>
+        <span>Find Me</span>
+      </li>
+      <li>
+        <mdb-icon far icon="hand-paper"></mdb-icon>
+        <span>Sign In</span>
+      </li>
+      <li>
+        <mdb-icon fas icon="shopping-bag"></mdb-icon>
+        <span>Bag</span>
+      </li>
+    </ul>
+  </div>
+  <div class="row banner">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <img class="img-fluid" src="../assets/banner.jpg" alt="Avatar" width="100%">
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <!-- margin-left: -60px; -->
+      <div class="description">
+        <h1>Problem Skin?</h1>
+        <h1>The Answer Is Clear.</h1>
+        <p>
+          Powered by an optimal blend of clean, non-irritating ingredients, this breakthrough clearifying collection is
+          formulated to treat problem skin and maintain a clear, calm complexion everyday.
+        </p>
+        <button class="btn btn-medium"><b style="font-size: 12px;">SHOP CLEAR GENIUS</b></button>
+      </div>
+    </div>
+  </div>
+  <div class="row slider">
+    <div class="col-12">
+      <h1>Just Arrived</h1>
+      <!-- <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="0"
+        [interval]="false">
+        <slide *ngFor="let slide of slides; let index=index">
+          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+          <div class="carousel-caption">
+            <h4>Slide {{index}}</h4>
+          </div>
+        </slide>
+      </carousel> -->
+      <!-- [customStarIcons]="heartIcons" -->
+      <owl-carousel-o [options]="customOptions" style="height: 200px;">
+        <ng-template carouselSlide>
+          <button class="btn btn-medium btn-new"><b>NEW</b></button>
+          <div style="text-align: center;">
+            <img src="../assets/p2.jpg" alt="p2">
+            <ngx-stars [readonly]="false" [size]="5" [initialStars]="5" [color]="'#8cd0e3'"
+              [customStarIcons]="heartIcons" style="text-align: center;">
+            </ngx-stars>
+            <div class="description">
+              <h4>Clear Genius Toner + Serum</h4>
+              <p>2 in 1 Clarifying Toner + Serum</p>
+            </div>
+            <div class="cbutton">
+              <button class="btn btn-medium btn-carousel"><b style="font-size: 12px;">ADD TO BAG $13</b></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <button class="btn btn-medium btn-new"><b>NEW</b></button>
+          <div style="text-align: center;">
+            <img src="../assets/p1.jpg" alt="p1">
+            <ngx-stars [readonly]="false" [size]="5" [initialStars]="4" [color]="'#8cd0e3'"
+              [customStarIcons]="heartIcons">
+            </ngx-stars>
+            <div class="description">
+              <h4>Clear Genius Peel</h4>
+              <p>Clarifying Liquid Peel</p>
+            </div>
+            <div class="cbutton">
+              <button class="btn btn-medium btn-carousel"><b style="font-size: 12px;">ADD TO BAG $22</b></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <button class="btn btn-medium btn-new"><b>NEW</b></button>
+          <div style="text-align: center;">
+            <img src="../assets/p3.jpg" alt="p3">
+            <ngx-stars [readonly]="false" [size]="5" [initialStars]="4" [color]="'#8cd0e3'"
+              [customStarIcons]="heartIcons">
+            </ngx-stars>
+            <div class="description">
+              <h4>Clear Genius Cleanser</h4>
+              <p>Clarifying Gel Cleanser</p>
+            </div>
+            <div class="cbutton">
+              <button class="btn btn-medium btn-carousel"><b style="font-size: 12px;">ADD TO BAG $13</b></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <button class="btn btn-medium btn-new"><b>NEW</b></button>
+          <div style="text-align: center;">
+            <img src="../assets/p4.jpg" alt="p4">
+            <ngx-stars [readonly]="false" [size]="5" [initialStars]="4" [color]="'#8cd0e3'"
+              [customStarIcons]="heartIcons">
+            </ngx-stars>
+            <div class="description">
+              <h4>Bright Idea Vitamin C Face Serum</h4>
+              <p>Vitamin C + Tri Peptide Cellagen</p>
+              <p>Protecting & Brightening Serum</p>
+            </div>
+            <div class="cbutton">
+              <button class="btn btn-medium btn-carousel"><b style="font-size: 12px;">ADD TO BAG $27</b></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <button class="btn btn-medium btn-new"><b>NEW</b></button>
+          <div style="text-align: center;">
+            <img src="../assets/p5.webp" alt="p4">
+            <ngx-stars [readonly]="false" [size]="5" [initialStars]="3" [color]="'#8cd0e3'"
+              [customStarIcons]="heartIcons">
+            </ngx-stars>
+            <div class="description">
+              <h4>Lemon and Sage Body Butter</h4>
+              <p>Lemon Sage Maximum Moisture Cream</p>
+            </div>
+            <div class="cbutton">
+              <button class="btn btn-medium btn-carousel"><b style="font-size: 12px;">ADD TO BAG $15</b></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <button class="btn btn-medium btn-new"><b>NEW</b></button>
+          <div style="text-align: center;">
+            <img src="../assets/p6.webp" alt="p4">
+            <ngx-stars [readonly]="false" [size]="5" [initialStars]="3" [color]="'#8cd0e3'"
+              [customStarIcons]="heartIcons">
+            </ngx-stars>
+            <div class="description">
+              <h4>Bliss Makeup Melt</h4>
+              <p>Dry/Wet Gentle Jelly Cleaner</p>
+            </div>
+            <div class="cbutton">
+              <button class="btn btn-medium btn-carousel"><b style="font-size: 12px;">ADD TO BAG $18</b></button>
+            </div>
+          </div>
+        </ng-template>
+
+      </owl-carousel-o>
+    </div>
+  </div>
+  <div class="row footer">
+    <div class="col-sm-12 col-md-3 col-lg-3" style="text-align: center;">
+      <b>Only on blissworld.com</b>
+    </div>
+    <div class="col-xs-4 col-sm-6 col-md-3">
+      <div class="d-flex justify-content-center flex-wrap">
+        <img
+          src=" https://cdn11.bigcommerce.com/s-9p889rxpkb/stencil/9c4822a0-ec1a-0138-81b7-0242ac11000e/e/d39eb050-ec1a-0138-542e-0242ac110014/icons/icon-freeship.svg"
+          alt="Avatar">
+        <p> <strong> FREE SHIPPING </strong> <br> (on orders over 240)</p>
+      </div>
+
+    </div>
+    <div class="col-xs-4 col-sm-6 col-md-3">
+      <div class="d-flex justify-content-center flex-wrap">
+        <img
+          src=" https://cdn11.bigcommerce.com/s-9p889rxpkb/stencil/9c4822a0-ec1a-0138-81b7-0242ac11000e/e/d39eb050-ec1a-0138-542e-0242ac110014/icons/icon-samples.svg"
+          alt="Avatar">
+        <p> <strong> FREE SAMPLES </strong> <br> (Yes, please?)</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-3">
+      <div class="d-flex justify-content-center flex-wrap">
+        <img
+          src="https://cdn11.bigcommerce.com/s-9p889rxpkb/stencil/9c4822a0-ec1a-0138-81b7-0242ac11000e/e/d39eb050-ec1a-0138-542e-0242ac110014/icons/icon-kits.svg"
+          alt="Avatar">
+        <p> <strong> SURPRISES </strong> <br> (you will love. trust..)</p>
+      </div>
+    </div>
+  </div>
+  <div class="row footer-res">
+    <div class="col-12" style="margin-bottom: 15px;">
+      <b>Only on blissworld.com</b>
+    </div>
+    <div class="d-inline-flex">
+      <div class="col-6">
+        <div>
+          <img
+            src=" https://cdn11.bigcommerce.com/s-9p889rxpkb/stencil/9c4822a0-ec1a-0138-81b7-0242ac11000e/e/d39eb050-ec1a-0138-542e-0242ac110014/icons/icon-freeship.svg"
+            alt="Avatar">
+          <p> <strong> FREE SHIPPING </strong> <br> (on orders over 240)</p>
+        </div>
+      </div>
+      <div class="col-6">
+        <div>
+          <img
+            src=" https://cdn11.bigcommerce.com/s-9p889rxpkb/stencil/9c4822a0-ec1a-0138-81b7-0242ac11000e/e/d39eb050-ec1a-0138-542e-0242ac110014/icons/icon-samples.svg"
+            alt="Avatar"><br>
+          <p> <strong> FREE SAMPLES </strong> <br> (Yes, please?)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div>
+        <img
+          src="https://cdn11.bigcommerce.com/s-9p889rxpkb/stencil/9c4822a0-ec1a-0138-81b7-0242ac11000e/e/d39eb050-ec1a-0138-542e-0242ac110014/icons/icon-kits.svg"
+          alt="Avatar">
+        <p> <strong> SURPRISES </strong> <br> (you will love. trust..)</p>
+      </div>
+    </div>
+  </div>
+</div>

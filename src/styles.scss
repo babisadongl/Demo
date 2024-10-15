@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
+.stars-line {
+    padding-top: 2rem !important;
+    justify-content: center !important;
+}
+
+.star {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #f5ea77 !important;
+}
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+    margin-top: 3rem;
+}
+
+.slider p{
+    margin-bottom: 0rem;
+}
+
+.owl-theme .owl-nav {
+    position: absolute;
+    top: 18rem;
+    width: 100%;
+    .owl-next{
+        //margin-left: 127rem !important;
+        float: right;
+    }
+    .owl-prev{
+        float: left;
+    }
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    color: black !important;
+    font-size: 33px !important;
+    background: transparent !important;
+}
+
+.md-form {
+    position: relative;
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    background-color:  white;
+        .form-control {
+        padding: 0.6rem 0 0.4rem 0;
+        padding-top: 1rem !important;
+        padding-left: 0.5rem !important;
+        width: 95% !important;
+        }
+}
+
+.md-form input[type=text]{
+    font-size: 13px !important;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid #8cd0e3 !important;
+}
+
+// .container-xl, .container-lg, .container-md, .container-sm, .container {
+//     max-width: 1452px !important;
+// }
